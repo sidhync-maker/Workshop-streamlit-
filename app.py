@@ -354,7 +354,7 @@ elif page == 'Mechanics':
         st.subheader(f'Welcome, {username}')
         with st.form('mech_form'):
             work_date = st.date_input('Date', value=date.today())
-            activity = st.text_area(\"Today's Activity\")
+            activity = st.text_area("Today's Activity")
             earning = st.number_input('Earnings (₹)', min_value=0.0, step=10.0)
             sub = st.form_submit_button('Add')
             if sub:

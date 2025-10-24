@@ -229,7 +229,7 @@ with st.sidebar:
             else:
                 st.error('Invalid credentials')
     else:
-        st.markdown(f\"**Signed in:** {st.session_state.user['username']}  \nRole: {st.session_state.user['role']}\")
+        st.markdown(f"**Signed in:** {st.session_state.user['username']}  \nRole: {st.session_state.user['role']}")
         if st.button('Logout'):
             st.session_state.user = None
             st.experimental_rerun()

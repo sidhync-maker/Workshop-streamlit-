@@ -213,7 +213,7 @@ with st.sidebar:
             if user and verify_password(password_input, user['password_hash']):
                 st.session_state.user = dict(user)
                 st.success(f"Logged in as {username_input} ({user['role']})")
-                st.session_state.logged_in
+                st.session_state.logged_in = True
             else:
                 st.error("Invalid credentials")
     else:

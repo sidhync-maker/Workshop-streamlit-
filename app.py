@@ -367,7 +367,7 @@ elif page == 'Mechanics':
         st.subheader('All Mechanics — Manager View')
         # add quick filter by mechanic
         conn = get_conn()
-        users = pd.read_sql_query(\"SELECT username FROM users WHERE role='mechanic'\", conn)
+        users = pd.read_sql_query("SELECT username FROM users WHERE role='mechanic'", conn)
         conn.close()
         mech_list = users['username'].tolist()
         filt = st.selectbox('Filter by mechanic', options=['All'] + mech_list)

@@ -224,7 +224,7 @@ with st.sidebar:
             user = get_user(username)
             if user and verify_password(password, user['password_hash']):
                 st.session_state.user = dict(user)
-                st.success(f\"Logged in as {username} ({user['role']})\")
+                st.success(f"Logged in as {username} ({user['role']})")
                 st.experimental_rerun()
             else:
                 st.error('Invalid credentials')
